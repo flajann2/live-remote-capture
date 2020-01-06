@@ -1,0 +1,13 @@
+* Live Remote Capture (LRC)                                        :TOC_5_gh:
+  - [[#introduction][Introduction]]
+  - [[#documentation][Documentation]]
+
+** Introduction
+   Live Remote Capture is a rust program that can
+   stream your webcam or attached USB cameras
+   to a remote server.
+
+   The remote server can either have the LRC remote
+   client running, or some other capture software.
+** Documentation
+
