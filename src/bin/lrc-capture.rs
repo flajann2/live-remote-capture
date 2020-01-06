@@ -1,0 +1,2 @@
+//! LRC Capture application
+
