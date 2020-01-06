@@ -1,0 +1,20 @@
+[package]
+name = "live-remote-capture"
+version = "0.0.0"
+authors = ["Fred Mitchell <fred.mitchell@gmx.de>"]
+edition = '2018'
+license = "MIT"
+description = "Capture webcams live, streaming them to a remote server for capture."
+homepage = "ZuseNEAT.de"
+documentation = ""
+repository = "https://github.com/flajann2/live-remote-capture"
+
+[dependencies]
+peg = "0"
+clap = "2.33.0"
+rustyline = "5.0.5"
+inkwell = { git = "https://github.com/TheDan64/inkwell", branch = "llvm8-0" }
+
+[workspace]
+members = [
+]
