@@ -13,8 +13,8 @@ repository = "https://github.com/flajann2/live-remote-capture"
 peg = "0"
 clap = "2.33.0"
 rustyline = "5.0.5"
-inkwell = { git = "https://github.com/TheDan64/inkwell", branch = "llvm8-0" }
-ffmpeg-next = "0.2.0"
+#ffmpeg-next = "0.2.0"
+ffmpeg-dev = "0.3.8"
 
 [workspace]
 members = [
