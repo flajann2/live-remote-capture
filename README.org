@@ -1,6 +1,8 @@
 * Live Remote Capture (LRC)                                        :TOC_5_gh:
   - [[#introduction][Introduction]]
   - [[#documentation][Documentation]]
+  - [[#notes--scratchpad][Notes & Scratchpad]]
+    - [[#build-tips-and-issues][Build tips and issues]]
 
 ** Introduction
    Live Remote Capture is a rust program that can
@@ -10,4 +12,11 @@
    The remote server can either have the LRC remote
    client running, or some other capture software.
 ** Documentation
+** Notes & Scratchpad
+   These are my development notes, for me personally,
+   and are not promised to be accurate nor up-to-date,
+   and will not be present in the master branch.
 
+   You've been warned.
+*** Build tips and issues
+    
