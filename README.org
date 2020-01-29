@@ -3,6 +3,9 @@
   - [[#documentation][Documentation]]
   - [[#notes--scratchpad][Notes & Scratchpad]]
     - [[#build-tips-and-issues][Build tips and issues]]
+    - [[#command-line-tools-to-scan-and-capture-directly-from-cam][Command-line tools to scan and capture directly from cam]]
+      - [[#scanning-for-cameras-on-the-command-line-tools][Scanning for cameras on the command-line (tools)]]
+      - [[#capture-directly-from-cam][Capture directly from cam]]
 
 ** Introduction
    Live Remote Capture is a rust program that can
@@ -19,4 +22,42 @@
 
    You've been warned.
 *** Build tips and issues
-    
+*** Command-line tools to scan and capture directly from cam
+**** Scanning for cameras on the command-line (tools)
+     List video devices
+     #+begin_src bash
+     v4l2-ctl --list-devices
+     #+end_src
+
+     List audio devices
+     #+begin_src bash
+     arecord -L
+     #+end_src
+
+**** Capture directly from cam
+     Broadcast
+     #+begin_src bash
+     ffmpeg -f v4l2 \
+            -i /dev/video2  \
+            -f alsa \
+            -i hw:0 \
+            -profile:v high \
+            -pix_fmt yuvj420p \
+            -level:v 4.1 \
+            -preset ultrafast \
+            -tune zerolatency \
+            -vcodec libx264 \
+            -r 10 \
+            -b:v 512k \
+            -s 640x360 \
+            -acodec aac \
+            -strict -2 \
+            -ac 2 \
+            -ab 32k \
+            -ar 44100 \
+            -f mpegts \
+            -flush_packets 0 udp://127.0.0.1:5000?pkt_size=1316
+     #+end_src
+
+     On VLC network stream:
+     udp://@127.0.0.1:5000
