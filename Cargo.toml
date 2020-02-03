@@ -15,6 +15,7 @@ clap = "2.33.0"
 rustyline = "5.0.5"
 #ffmpeg-next = "0.2.0"
 ffmpeg-dev = "0.3.8"
+libc = "0.2.66"
 
 [workspace]
 members = [
