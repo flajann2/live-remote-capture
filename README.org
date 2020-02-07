@@ -3,6 +3,7 @@
   - [[#documentation][Documentation]]
   - [[#notes--scratchpad][Notes & Scratchpad]]
     - [[#build-tips-and-issues][Build tips and issues]]
+      - [[#dependencies][Dependencies]]
     - [[#command-line-tools-to-scan-and-capture-directly-from-cam][Command-line tools to scan and capture directly from cam]]
       - [[#scanning-for-cameras-on-the-command-line-tools][Scanning for cameras on the command-line (tools)]]
       - [[#capture-directly-from-cam][Capture directly from cam]]
@@ -22,6 +23,17 @@
 
    You've been warned.
 *** Build tips and issues
+**** Dependencies
+     Not all of these may be necessary.
+     #+begin_src bash
+     apt install libavutil-dev
+     apt install libavcodec-dev
+     apt install libavformat-dev
+     apt install libavfilter-dev
+     apt install libavresample-dev
+     apt install libavdevice-dev
+     #+end_src
+
 *** Command-line tools to scan and capture directly from cam
 **** Scanning for cameras on the command-line (tools)
      List video devices

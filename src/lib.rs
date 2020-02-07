@@ -6,7 +6,7 @@ use std::path::{PathBuf, Path};
 use std::ffi::{CStr, CString};
 use std::os::raw::{c_char, c_int};
 use libc::{size_t, c_float, c_void};
-use ffmpeg_dev::sys::{
+use ffmpeg4_ffi::sys::{
     self,
     AVFrame,
     AVDictionary,
@@ -33,7 +33,6 @@ use ffmpeg_dev::sys::{
     AVCodecID_AV_CODEC_ID_H264 as AV_CODEC_ID_H264,
     AV_INPUT_BUFFER_PADDING_SIZE,
 };
-
 
 pub mod scan;
 pub mod stream;
