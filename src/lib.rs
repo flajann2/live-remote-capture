@@ -3,11 +3,13 @@
 #![allow(unused)]
 use std::convert::AsRef;
 use std::path::{PathBuf, Path};
-use std::ffi::{CStr, CString};
-use std::os::raw::{c_char, c_int};
-use libc::{size_t, c_float, c_void};
-use ffmpeg4_ffi::sys::{
+pub use std::ffi::{CStr, CString};
+pub use std::os::raw::{c_char, c_int};
+pub use libc::{size_t, c_float, c_void};
+pub use ffmpeg4_ffi::sys::{
     self,
+    av_output_video_device_next,
+    av_output_audio_device_next,
     AVFrame,
     AVDictionary,
     AVCodec,
@@ -16,6 +18,9 @@ use ffmpeg4_ffi::sys::{
     AVPacket,
     AVFormatContext,
     AVOutputFormat,
+    AVDeviceCapabilitiesQuery,
+    AVDeviceInfo,
+    AVDeviceInfoList,
     AVCodecParameters,
     AVCodecParserContext,
     AVMediaType,
