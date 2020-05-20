@@ -11,7 +11,7 @@ repository = "https://github.com/flajann2/live-remote-capture"
 
 [dependencies]
 peg = "0"
-clap = "2.33.0"
+clap = "2.33"
 rustyline = "5.0.5"
 ffmpeg4-ffi = "0.3.8"
 libc = "0.2.66"
